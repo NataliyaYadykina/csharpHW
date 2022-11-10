@@ -22,9 +22,6 @@ int Sum(int number, int count)
     {
         result += number%10;
         number /= 10;
-        Console.WriteLine(number%10);
-        Console.WriteLine(result);
-        Console.WriteLine();
     }
     return result;
 }
