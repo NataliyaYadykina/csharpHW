@@ -44,7 +44,7 @@ int[] arr = new int[length];
 // заполним массив
 int[] randomArr = RandomArray(arr, 10, 100);
 // выведем массив в консоль
-PrintArr(arr);
+PrintArr(randomArr);
 // посчитаем и покажем сумму элементов, стоящих на нечетных позициях
-int sumOdd = SumOddInArray(arr);
+int sumOdd = SumOddInArray(randomArr);
 Console.WriteLine(sumOdd);

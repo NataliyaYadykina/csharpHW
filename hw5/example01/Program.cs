@@ -46,8 +46,8 @@ int[] arr = new int[length];
 // заполним массив
 int[] randomArr = RandomArray(arr, 100, 1000);
 // выведем массив в консоль
-PrintArr(arr);
+PrintArr(randomArr);
 // посчитаем и покажем количество четных элементов в массиве
-int count = CountEvenInArray(arr);
+int count = CountEvenInArray(randomArr);
 Console.WriteLine(count);
 

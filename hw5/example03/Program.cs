@@ -53,8 +53,8 @@ double[] arr = new double[length];
 // заполним массив
 double[] randomArr = RandomArray(arr, -99.00, 100.00);
 // выведем массив в консоль
-PrintArr(arr);
+PrintArr(randomArr);
 
 // посчитаем и покажем разницу между максимальным и минимальным элементами массива
-double differenceMaxMin = DifferenceMaxMinArray(arr);
+double differenceMaxMin = DifferenceMaxMinArray(randomArr);
 Console.WriteLine(differenceMaxMin);
