@@ -11,7 +11,7 @@ void Intersection(double b1, double k1, double b2, double k2)
     {
         double x = Math.Round((b2 - b1) / (k1 - k2), 2);
         double y = Math.Round(k1 * x + b1, 2);
-        Console.WriteLine($"Точкой пересечения заданных прямых является точка с координатами ({x}, {y}).");
+        Console.WriteLine($"Точкой пересечения заданных прямых является точка с координатами ({x}; {y}).");
     }
     else
     {
