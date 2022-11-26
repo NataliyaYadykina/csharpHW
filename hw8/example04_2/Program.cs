@@ -21,14 +21,15 @@ bool FindValueInArray(int[,,] array, int value)
                 {
                     check = true;
                     break;
-                }  
+                }
+                if (array[i, j, k] == 0) break;
             }
         }
     }
     return check;
 }
 
-// Заполнить трехмерный массив неповторяющимися 3-значными числами.
+// Заполнить трехмерный массив неповторяющимися 2-значными числами.
 void FillArray(int[,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -37,12 +38,12 @@ void FillArray(int[,,] array)
         {
             for (int k = 0; k < array.GetLength(2); k++)
             {
-                int tempValue = new Random().Next(1, 30);
+                int tempValue = new Random().Next(10, 100);
                 Console.WriteLine($"Value el({i},{j},{k}) = {tempValue}.");
                 while (FindValueInArray(array, tempValue))
                 {
                     Console.WriteLine("REPEAT! Change!");
-                    tempValue = new Random().Next(1, 30);
+                    tempValue = new Random().Next(10, 100);
                     Console.WriteLine($"NEW tempValue = {tempValue}. Check!");
                     FindValueInArray(array, tempValue);
                 }
@@ -70,7 +71,7 @@ void PrintArray(int[,,] array)
     }
 }
 
-int[,,] arr = new int[new Random().Next(2, 4), new Random().Next(2, 4), new Random().Next(2, 4)];
+int[,,] arr = new int[new Random().Next(2, 5), new Random().Next(2, 5), new Random().Next(2, 5)];
 Console.WriteLine();
 
 FillArray(arr);

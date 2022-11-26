@@ -7,7 +7,7 @@
 // 27(0, 0, 1) 90(0, 1, 1)
 // 26(1, 0, 1) 55(1, 1, 1)
 
-// Заполнить трехмерный массив неповторяющимися 3-значными числами.
+// Заполнить трехмерный массив неповторяющимися 2-значными числами.
 void FillArray(int[,,] array)
 {
     int[] ElementsValueArray = new int[array.GetLength(0) * array.GetLength(1) * array.GetLength(2)];
@@ -19,7 +19,7 @@ void FillArray(int[,,] array)
         {
             for (int k = 0; k < array.GetLength(2); k++)
             {
-                tempValue = new Random().Next(1, 30);
+                tempValue = new Random().Next(10, 100);
                 Console.WriteLine($"Value el({i},{j},{k}) = {tempValue}.");
                 for (int l = 0; l <= indexElementsValueArray; l++)
                 {
@@ -27,7 +27,7 @@ void FillArray(int[,,] array)
                     if (tempValue == ElementsValueArray[l])
                     {
                         Console.WriteLine("Repeat!");
-                        tempValue = new Random().Next(1, 30);
+                        tempValue = new Random().Next(10, 100);
                         Console.WriteLine($"New Value el({i},{j},{k}) = {tempValue}.");
                         l = -1;
                         Console.WriteLine($"l = {l}");
@@ -59,7 +59,7 @@ void PrintArray(int[,,] array)
     }
 }
 
-int[,,] arr = new int[new Random().Next(2, 4), new Random().Next(2, 4), new Random().Next(2, 4)];
+int[,,] arr = new int[new Random().Next(2, 5), new Random().Next(2, 5), new Random().Next(2, 5)];
 Console.WriteLine();
 
 FillArray(arr);
