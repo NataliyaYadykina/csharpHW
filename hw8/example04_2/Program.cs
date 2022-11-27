@@ -20,9 +20,7 @@ bool FindValueInArray(int[,,] array, int value)
                 if (array[i, j, k] == value)
                 {
                     check = true;
-                    break;
                 }
-                if (array[i, j, k] == 0) break;
             }
         }
     }
